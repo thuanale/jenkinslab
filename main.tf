@@ -10,7 +10,7 @@ terraform {
     storage_account_name = "tle1str1"
     container_name = "tfstate"
     key = "test.jenkins.tfstate"
-    access_key = "xwZliHx2lRUa5o5WPK99S402n3XKNv+dhaxPKWtASXoA9UP+5ALI8SY2ZO6quRTvW85N6A/03iYU+AStWhdtBA=="
+    #access_key shoule be set via environment
   }
 }
 provider "azurerm" {
