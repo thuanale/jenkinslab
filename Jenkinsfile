@@ -11,27 +11,27 @@ pipeline {
     }
     stage('Init'){
       steps{
-        sh label '', script: 'terraform init'
+        sh 'terraform init'
       }
     }
     stage('Format'){
       steps{
-        sh label '', script: 'terraform fmt'
+        sh 'terraform fmt'
       }
     }
     stage('Validate'){
       steps{
-        sh label '', script: 'terraform validate'
+        sh 'terraform validate'
       }
     }
     stage('Plan'){
       steps{
-        sh label '', script: 'terraform plan'
+        sh 'terraform plan'
       }
     }
     stage('Apply'){
       steps{
-        sh label '', script: 'terraform apply'
+        sh 'terraform apply'
       }
     }
   }
