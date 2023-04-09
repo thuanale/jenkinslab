@@ -24,6 +24,11 @@ pipeline {
         sh 'terraform validate'
       }
     }
+    stage('AZ Login'){
+      steps{
+        sh 'az login'
+      }
+    }
     stage('Plan'){
       steps{
         sh 'terraform plan'
