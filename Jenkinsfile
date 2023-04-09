@@ -5,32 +5,32 @@ pipeline {
   }
   stages {
     stage('Clone'){
-      steps {
+      steps{
         git 'https://github.com/thuanale/jenkinslab.git'
       }
     }
     stage('Init'){
-      steps {
+      steps{
         sh label '', script: 'terraform init'
       }
     }
     stage('Format'){
-      steps {
+      steps{
         sh label '', script: 'terraform fmt'
       }
     }
     stage('Validate'){
-      steps {
+      steps{
         sh label '', script: 'terraform validate'
       }
     }
-    stage('Plan') {
-      steps {
+    stage('Plan'){
+      steps{
         sh label '', script: 'terraform plan'
       }
     }
-    stage('Apply') {
-      steps {
+    stage('Apply'){
+      steps{
         sh label '', script: 'terraform apply'
       }
     }
