@@ -29,5 +29,10 @@ pipeline {
         sh label '', script: 'terraform plan'
       }
     }
+    stage('Apply') {
+      steps {
+        sh label '', script: 'terraform apply'
+      }
+    }
   }
 }
