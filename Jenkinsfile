@@ -24,12 +24,12 @@ pipeline {
         sh label '', script: 'terraform validate'
       }
     }
-    stage('Plan') {
+    stage('Plan'){
       steps{
         sh label '', script: 'terraform plan'
       }
     }
-    stage('Apply') {
+    stage('Apply'){
       steps{
         sh label '', script: 'terraform apply'
       }
